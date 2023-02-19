@@ -31,3 +31,14 @@ let x4=Symbol("s1");
 
 console.log(x3);
 console.log(x4);
+
+/* 
+ To read a symbol from the registry, use Symbol.for(key) which checks if there’s a symbol described as key, then returns it, 
+ otherwise creates a new symbol Symbol.for(key) and stores it in the registry by the given key
+*/
+
+let empid = Symbol.for("empno"); // if the symbol did not exist, it is created
+// read it again (maybe from another part of the code)
+let empidAgain= Symbol.for("empid");
+
+console.log(empid);
